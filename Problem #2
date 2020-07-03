@@ -1,0 +1,13 @@
+#1108 Defanging and IP Address(#Number 2)
+
+#Solution 1
+return '[.]'.join(address.split('.'))
+
+#Solution 2
+return address.replace('.', '[.]')
+
+#Solution 3
+return ''.join('[.]' if i == '.' else i for i in address)
+
+#Solution 4
+return ''.join(ch if ch.isdigit() else '[.]' for ch in address)
